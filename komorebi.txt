@@ -1,9 +1,0 @@
-site: https://github.com/LGUG2Z/komorebi#demonstrations
-
-Starting komorebi when logging in:
-1. Win+R and type "shell:startup" to open startup directory
-2. Create a new shortcut:
-	target: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe "& komorebic start -a; sleep 10"
-	key:    ctrl + alt + w
-	run:    Minimised
-
