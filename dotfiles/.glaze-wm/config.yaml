@@ -39,14 +39,14 @@ focus_borders:
     color: "#ee1027"
 
 bar:
-  height: "21px"
+  height: "20px"
   position: "top"
   opacity: 1.0
   background: "#10141cf7"
   foreground: "#e7e0d0"
   font_family: "Segoe UI"
-  font_size: "9px"
-  padding: "3px 6px"
+  font_size: "10px"
+  padding: "3px 10px"
   offset_x: "0"
   offset_y: "0"
   border_radius: "0"
@@ -58,6 +58,15 @@ bar:
   components_center:
     - type: "window title"
   components_right:
+    - type: "cpu"
+      label: "CPU: {percent_usage}%  |  "
+      refresh_interval_ms: 1000
+    - type: "gpu"
+      label: "GPU: {percent_usage}%  |  "
+      refresh_interval_ms: 1000
+    - type: "memory"
+      label: "MEM: {percent_usage}%  "
+      refresh_interval_ms: 2000
     - type: "system tray"
     - type: "tiling direction"
       label_horizontal: "⮂"
