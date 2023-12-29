@@ -61,9 +61,6 @@ bar:
     - type: "cpu"
       label: "CPU: {percent_usage}%  |  "
       refresh_interval_ms: 1000
-    - type: "gpu"
-      label: "GPU: {percent_usage}%  |  "
-      refresh_interval_ms: 1000
     - type: "memory"
       label: "MEM: {percent_usage}%  "
       refresh_interval_ms: 2000
@@ -119,6 +116,9 @@ window_rules:
   - command: "set floating"
     match_class_name: "#32770"
 
+  - command: "set floating"
+    match_title: "Kalkulator"
+
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders 0px -7px -1px -7px"
     match_title: "Steam"
@@ -136,7 +136,10 @@ window_rules:
     match_process_name: "devenv"
 
   - command: "move to workspace 5"
-    match_process_name: "/r2g_hellcard_.*/"
+    match_process_name: "/r2g_hellcard_.*|Unreal */"
+
+  - command: "move to workspace 6"
+    match_process_name: "/EpicGamesLauncher/"
 
   - command: "move to workspace 9"
     match_title: "/Spotify.*/"
@@ -230,8 +233,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec cmd"
-    binding: "Alt+Enter"
+  #  - command: "exec cmd"
+  #  binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
